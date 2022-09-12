@@ -33,6 +33,4 @@ in {
   systemd.services.direnv-reload = lib.mkIf config.system.autoUpgrade.enable
     (direnv-reload-service "qaristote");
   systemd.services.nix-gc.after = [ "direnv-reload.service" ];
-
-  # virtualisation.docker.enable = true;
 }

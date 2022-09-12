@@ -8,11 +8,9 @@
   };
 
   i18n = {
-    defaultLocale = "fr_FR.utf8";
-    extraLocaleSettings.LANG = "en_US.utf8";
+    defaultLocale = "en_US.utf8";
   };
   console = {
     font = "Lat2-Terminus16";
-    keyMap = "fr";
   };
 }

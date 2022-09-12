@@ -55,8 +55,6 @@ in {
     autoRepeatDelay = 200;
   };
 
-  programs.steam.enable = true;
-
   # Allow all users to change hardware settings (brightness, backlight)
   services.udev.extraRules = ''
     ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="intel_backlight", MODE="0666", RUN+="${pkgs.coreutils}/bin/chmod a+w /sys/class/backlight/%k/brightness"

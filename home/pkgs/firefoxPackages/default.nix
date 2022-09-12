@@ -8,7 +8,7 @@ in {
   };
   arkenfox-userjs = pkgs.fetchurl {
     url =
-      "https://raw.githubusercontent.com/arkenfox/user.js/c6ab6c4b4895d533c872085ebb6f3b6c78627d80/user.js";
-    sha256 = "sha256-6oZYIL0HMix/CagZUgePcJU9r1Yz0BWsumEbUwkkwDs=";
+      "https://github.com/arkenfox/user.js/blob/3f09afdee07c5aea33f6dc4194e1425d6400a0d7/user.js";
+    sha256 = "sha256:DZIhJXnkg8XTFQyDh9gpx5lgrS5FN+c9vPJLVDb00OU=";
   };
 }

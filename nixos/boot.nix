@@ -4,7 +4,7 @@
   imports = [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
 
-    <nixos-hardware/dell/latitude/7490>
+    <nixos-hardware/lenovo/thinkpad/x1>
     <nixos-hardware/common/pc/ssd>
   ];
 
@@ -30,25 +30,10 @@
     };
   };
 
-  # Decrypt disk
-  boot.initrd.luks.devices = {
-    sda3_crypt = {
-      name = "sda3_crypt";
-      device = "/dev/disk/by-uuid/ba5dc9cd-3a73-4a01-880b-8720844307ae";
-      preLVM = true;
-    };
-  };
-
   # Kernel
   boot.initrd.availableKernelModules = [ "usb_storage" ];
-  boot.kernelParams = [ "i915.dc_enable=0" "intel_idle.max_cstate=1" ];
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Hardware
   hardware.firmware = with pkgs; [ firmwareLinuxNonfree ];
-  ## mcelog
-  hardware.mcelog.enable = true;
-  services.udev.extraRules = ''
-    ACTION=="add", KERNEL=="mcelog", SUBSYSTEM=="misc", TAG+="systemd", ENV{SYSTEMD_WANTS}+="mcelog.service"
-  '';
 }

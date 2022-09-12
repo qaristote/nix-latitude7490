@@ -61,6 +61,7 @@ This function should only modify configuration layer settings."
      csv
      emacs-lisp spacemacs-misc
      go
+     haskell
      latex
      markdown
      ocaml coq
