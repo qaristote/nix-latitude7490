@@ -7,8 +7,8 @@ let
       user_pref("${name}", ${builtins.toJSON value});
     '') prefs)}
   '';
-  config-template =
-    builtins.readFile "${pkgs.personal.firefoxPackages.arkenfox-userjs}";
+  config-template = "";
+    # builtins.readFile "${pkgs.personal.firefoxPackages.arkenfox-userjs}";
   config-default = config-template + mkUserJs {
     "browser.shell.checkDefaultBrowser" = true; # 0101
     "keyword.enabled" = true; # 0801
@@ -70,34 +70,6 @@ in {
       default = {
         id = 0; # isDefault = true
 
-        extraConfig = config-default;
-        userChrome = userchrome-treestyletabs;
-      };
-
-      # For video streaming
-      streaming = {
-        id = 1;
-
-        extraConfig = config-default + mkUserJs {
-          # Widevine (DRMs)
-          "media.gmp-widevinecdm.enabled" = true;
-          "media.eme.enabled" = true;
-          # Cache
-          "browser.cache.disk.enable" = true;
-          "browser.cache.offline.storage" = true;
-          # Privacy
-          "privacy.clearOnShutdown.cache" = false;
-          "privacy.clearOnShutdown.cookies" = false;
-          "privacy.clearOnShutdown.siteSettings" = false;
-          "privacy.clearOnShutdown.offlineApps" = false;
-          "privacy.resistFingerprinting" = false; # Netflix is whining
-        };
-        userChrome = userchrome-treestyletabs;
-      };
-
-      videoconferencing = {
-        id = 2;
-
         extraConfig = config-default + mkUserJs {
           # IMPORTANT: uncheck "Prevent WebRTC from leaking local IP addresses" in uBlock Origin's settings
           # NOTE: if using RFP (4501)
@@ -117,47 +89,6 @@ in {
         };
         userChrome = userchrome-treestyletabs;
       };
-    };
-  };
-
-  xdg.desktopEntries = let
-    icons = pkgs.personal.icons;
-    firefox-profiles-dir = "${config.home.homeDirectory}/.mozilla/firefox";
-    firefoxInProfile = profile:
-      ''
-        ${pkgs.firefox}/bin/firefox --profile "${firefox-profiles-dir}/${profile}"'';
-  in {
-    netflix = {
-      name = "Netflix";
-      genericName = "Streaming service";
-      icon = "${icons.netflix}";
-      comment = "Unlimited movies, TV shows, and more.";
-      exec =
-        "${firefoxInProfile "streaming"} https://www.netflix.com/fr-en/login";
-      categories = [ "AudioVideo" "Video" "Player" ];
-    };
-    mubi = {
-      name = "MUBI";
-      genericName = "Streaming service";
-      icon = "${icons.mubi}";
-      comment = "Watch hand-picked cinema.";
-      exec = "${firefoxInProfile "streaming"} https://mubi.com";
-      categories = [ "AudioVideo" "Video" "Player" ];
-    };
-    deezer = {
-      name = "Deezer";
-      genericName = "Streaming service";
-      icon = "${icons.deezer}";
-      comment = "Listen to music online";
-      exec = "${firefoxInProfile "streaming"} https://deezer.com/login";
-      categories = [ "AudioVideo" "Audio" "Player" "Music" ];
-    };
-    videoconferences = {
-      name = "Video Conferences";
-      genericName = "Video conference";
-      comment = "Use video conferencing software in a browser.";
-      exec = "${firefoxInProfile "videoconferencing"}";
-      categories = [ "Network" "VideoConference" ];
     };
   };
 }

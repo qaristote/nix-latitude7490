@@ -43,11 +43,9 @@ This function should only modify configuration layer settings."
      ;; eww
      git
      helm
-     javascript
      ;; lsp
      multiple-cursors
      nixos
-     org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -58,23 +56,13 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      ;; Programming (and markup) languages
      ;; ----------------------------------------------------------------
-     csv
      emacs-lisp spacemacs-misc
-     go
      haskell
-     latex
      markdown
-     ocaml coq
-     php
-     python
-     rust
-     yaml
      ;; ----------------------------------------------------------------
      ;; Private layers
      ;; ----------------------------------------------------------------
      direnv
-     bibli-paris
-     why3
    )
 
    ;; List of additional packages that will be installed without being wrapped
@@ -586,16 +574,6 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   ;; Variables customization
   (custom-set-variables
-   '(merlin-command "ocamlmerlin")
-
-   ;; reftex
-   ;; https://tex.stackexchange.com/a/54825
-   '(reftex-bibliography-commands '("bibliography"
-                                    "nobibliography"
-                                    "addbibresource"))
-   ;; https://tex.stackexchange.com/a/213909
-   '(reftex-use-external-file-finders t)
-
    ;; don't pop warning buffer on native comp
    '(native-comp-async-report-warnings-errors 'silent)
    )
@@ -603,13 +581,10 @@ before packages are loaded."
   ;; auto-completion
   (global-company-mode t)
 
-  ;; hooks
-  (add-hook 'LaTeX-mode-hook 'outline-minor-mode)
-
   ;; Key bindings
   (defun my-ediff-dotfile-and-template ()
     (interactive)
-    (ediff-files "~/code/nix/latitude-7490/home/config/dotfiles/spacemacs"
+    (ediff-files "~/code/nix/thinkpad-x1/home/config/dotfiles/spacemacs"
                  (concat dotspacemacs-template-directory ".spacemacs.template")))
   (spacemacs/set-leader-keys "feD" 'my-ediff-dotfile-and-template)
 

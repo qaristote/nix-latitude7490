@@ -9,14 +9,6 @@
     enable = true;
   };
 
-  # Hosts
-  networking.hosts = {
-  };
-
-  # DHCP
-  networking.interfaces.enp0s31f6.useDHCP = true;
-  networking.interfaces.wlp2s0.useDHCP = true;
-
   # Firewall
   networking.firewall = {
     enable = true;

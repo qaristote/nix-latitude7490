@@ -15,7 +15,7 @@ in {
     in {
       "${modifier}+Shift+Return" = "exec firefox";
       "${modifier}+Control+Return" = "exec $EDITOR";
-      "${modifier}+Shift+e" = "exec i3-msg exit";
+      "${modifier}+Shift+e" = "exec xfce4-session-logout";
       "${modifier}+p" = "move workspace to output right";
       "XF86MonBrightnessUp" = "exec ${brightnessctl} set 5%+";
       "XF86MonBrightnessDown" = "exec ${brightnessctl} set 5%-";

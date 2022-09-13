@@ -13,20 +13,6 @@
         platforms = platforms.all;
         };
       };
-    "canvasblocker" = buildFirefoxXpiAddon {
-      pname = "canvasblocker";
-      version = "1.8";
-      addonId = "CanvasBlocker@kkapsner.de";
-      url = "https://addons.mozilla.org/firefox/downloads/file/3910598/canvasblocker-1.8.xpi";
-      sha256 = "817a6181be877668eca1d0fef9ecf789c898e6d7d93dca7e29479d40f986c844";
-      meta = with lib;
-      {
-        homepage = "https://github.com/kkapsner/CanvasBlocker/";
-        description = "Alters some JS APIs to prevent fingerprinting.";
-        license = licenses.mpl20;
-        platforms = platforms.all;
-        };
-      };
     "clearurls" = buildFirefoxXpiAddon {
       pname = "clearurls";
       version = "1.24.1";
@@ -52,20 +38,6 @@
         homepage = "https://darkreader.org/";
         description = "Dark mode for every website. Take care of your eyes, use dark theme for night and daily browsing.";
         license = licenses.mit;
-        platforms = platforms.all;
-        };
-      };
-    "multi-account-containers" = buildFirefoxXpiAddon {
-      pname = "multi-account-containers";
-      version = "8.0.7";
-      addonId = "@testpilot-containers";
-      url = "https://addons.mozilla.org/firefox/downloads/file/3932862/multi_account_containers-8.0.7.xpi";
-      sha256 = "0e60e00c13dcc372b43ddb2e5428c2e3c1e79d2b23d7166df82d45245edc4f10";
-      meta = with lib;
-      {
-        homepage = "https://github.com/mozilla/multi-account-containers/#readme";
-        description = "Firefox Multi-Account Containers lets you keep parts of your online life separated into color-coded tabs. Cookies are separated by container, allowing you to use the web with multiple accounts and integrate Mozilla VPN for an extra layer of privacy.";
-        license = licenses.mpl20;
         platforms = platforms.all;
         };
       };
@@ -110,20 +82,6 @@
         platforms = platforms.all;
         };
       };
-    "temporary-containers" = buildFirefoxXpiAddon {
-      pname = "temporary-containers";
-      version = "1.9.2";
-      addonId = "{c607c8df-14a7-4f28-894f-29e8722976af}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/3723251/temporary_containers-1.9.2.xpi";
-      sha256 = "3340a08c29be7c83bd0fea3fc27fde71e4608a4532d932114b439aa690e7edc0";
-      meta = with lib;
-      {
-        homepage = "https://github.com/stoically/temporary-containers";
-        description = "Open tabs, websites, and links in automatically managed disposable containers which isolate the data websites store (cookies, storage, and more) from each other, enhancing your privacy and security while you browse.";
-        license = licenses.mit;
-        platforms = platforms.all;
-        };
-      };
     "tree-style-tab" = buildFirefoxXpiAddon {
       pname = "tree-style-tab";
       version = "3.8.26";
@@ -148,20 +106,6 @@
         homepage = "https://github.com/gorhill/uBlock#ublock-origin";
         description = "Finally, an efficient wide-spectrum content blocker. Easy on CPU and memory.";
         license = licenses.gpl3;
-        platforms = platforms.all;
-        };
-      };
-    "unpaywall" = buildFirefoxXpiAddon {
-      pname = "unpaywall";
-      version = "3.98";
-      addonId = "{f209234a-76f0-4735-9920-eb62507a54cd}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/3816853/unpaywall-3.98.xpi";
-      sha256 = "6893bea86d3c4ed7f1100bf0e173591b526a062f4ddd7be13c30a54573c797fb";
-      meta = with lib;
-      {
-        homepage = "https://unpaywall.org/products/extension";
-        description = "Get free text of research papers as you browse, using Unpaywall's index of ten million legal, open-access articles.";
-        license = licenses.mit;
         platforms = platforms.all;
         };
       };

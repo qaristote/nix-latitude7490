@@ -2,5 +2,5 @@ nix-code-path: ''
   # This script calls sudo, hence its content could be modified
   # in the view of escalating privileges. It should thus be only
   # writable by root.
-  sudo cp -rf ${nix-code-path}/latitude-7490/nixos/ /etc/
+  sudo cp -rf ${nix-code-path}/thinkpad-x1/nixos/ /etc/
 ''

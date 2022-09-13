@@ -5,19 +5,12 @@
     [
       # Various
       evince
-      gimp
       gnupg
       keepassxc
       coreutils
       moreutils
       pavucontrol
-      transmission-gtk
-      vlc
       zotero
-    ] ++ [
-      # Social
-      signal-desktop
-      thunderbird
     ] ++ [
       # Fonts
       material-design-icons

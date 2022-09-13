@@ -29,8 +29,15 @@ in {
   # Enable X server
   services.xserver = {
     enable = true;
-    desktopManager.xfce.enable = true;
-    windowManager.i3.enable = true;
+    desktopManager = {
+      xterm.enable = false;
+      xfce = {
+        enable = true;
+        noDesktop = true;
+        enableXfwm = false;
+      };
+    };
+    # windowManager.i3.enable = true;
     displayManager = {
       lightdm = {
         enable = true;
@@ -60,4 +67,14 @@ in {
     ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="intel_backlight", MODE="0666", RUN+="${pkgs.coreutils}/bin/chmod a+w /sys/class/backlight/%k/brightness"
     ACTION=="add", SUBSYSTEM=="leds", KERNEL=="dell::kbd_backlight", MODE="0666", RUN+="${pkgs.coreutils}/bin/chmod a+w /sys/class/leds/%k/brightness"
   '';
+
+  # bigger tty fonts
+  console.font =
+    "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
+  services.xserver.dpi = 180;
+  environment.variables = {
+    GDK_SCALE = "2";
+    GDK_DPI_SCALE = "0.5";
+    _JAVA_OPTIONS = "-Dsun.java2d.uiScale=2";
+  };
 }

@@ -17,8 +17,6 @@ in {
       (autostart { command = "xfce4-power-manager --daemon"; })
       (autostart { command = "rfkill block bluetooth"; })
       # Launch frequently used apps
-      (autostart { command = "thunderbird"; })
-      (autostart { command = "signal-desktop"; })
       (autostart { command = ''i3-msg "workspace 10; exec keepassxc"''; })
     ];
 }
