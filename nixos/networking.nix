@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  networking.hostName = "latitude-7490";
+  networking.hostName = "thinkpad-x1";
 
   # NetworkManager
   environment.systemPackages = with pkgs; [ networkmanager ];

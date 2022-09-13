@@ -30,6 +30,14 @@
     };
   };
 
+  boot.initrd.luks.devices = {
+    crypt = {
+      name = "crypt";
+      device = "130523d8-c1dd-4e36-adbc-eeeff58193ca";
+      preLVM = true;
+    };
+  };
+
   # Kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 

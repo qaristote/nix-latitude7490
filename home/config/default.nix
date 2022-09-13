@@ -7,7 +7,7 @@
     ./emacs.nix
     ./firefox
     ./git.nix
-    ./i3
+    # ./i3
     ./kdeconnect.nix
     ./picom.nix
     ./redshift.nix

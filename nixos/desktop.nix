@@ -33,8 +33,8 @@ in {
       xterm.enable = false;
       xfce = {
         enable = true;
-        noDesktop = true;
-        enableXfwm = false;
+        # noDesktop = true;
+        # enableXfwm = false;
       };
     };
     # windowManager.i3.enable = true;
@@ -42,19 +42,18 @@ in {
       lightdm = {
         enable = true;
         background = background-image;
-        greeters.gtk = {
-          enable = true;
-          theme = {
-            name = "Arc-Dark";
-            package = pkgs.arc-theme;
-          };
-          iconTheme = {
-            name = "Breeze-dark";
-            package = pkgs.breeze-icons;
-          };
-        };
+        # greeters.gtk = {
+        #   enable = true;
+        #   theme = {
+        #     name = "Arc-Dark";
+        #     package = pkgs.arc-theme;
+        #   };
+        #   iconTheme = {
+        #     name = "Breeze-dark";
+        #     package = pkgs.breeze-icons;
+        #   };
       };
-      defaultSession = "xfce+i3";
+      defaultSession = "xfce";
     };
     # Hardware
     libinput.enable = true;
