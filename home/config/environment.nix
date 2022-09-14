@@ -9,6 +9,7 @@
       keepassxc
       coreutils
       moreutils
+      nixfmt
       pavucontrol
       zotero
     ] ++ [
