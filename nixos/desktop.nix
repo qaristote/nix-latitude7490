@@ -57,7 +57,7 @@ in {
     };
     # Hardware
     libinput.enable = true;
-    layout = "fr";
+    layout = "us,fr";
     autoRepeatDelay = 200;
   };
 
