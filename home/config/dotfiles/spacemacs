@@ -57,8 +57,11 @@ This function should only modify configuration layer settings."
      ;; Programming (and markup) languages
      ;; ----------------------------------------------------------------
      emacs-lisp spacemacs-misc
-     haskell
+     javascript
+     (haskell :variables haskell-enable-hindent t)
      markdown
+     ocaml
+     yaml
      ;; ----------------------------------------------------------------
      ;; Private layers
      ;; ----------------------------------------------------------------

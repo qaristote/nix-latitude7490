@@ -42,22 +42,16 @@ in {
       lightdm = {
         enable = true;
         background = background-image;
-        # greeters.gtk = {
-        #   enable = true;
-        #   theme = {
-        #     name = "Arc-Dark";
-        #     package = pkgs.arc-theme;
-        #   };
-        #   iconTheme = {
-        #     name = "Breeze-dark";
-        #     package = pkgs.breeze-icons;
-        #   };
       };
       defaultSession = "xfce";
     };
     # Hardware
-    libinput.enable = true;
+    libinput = {
+      enable = true;
+      mouse.accelSpeed = "100.0";
+    };
     layout = "us,fr";
+    xkbOptions = "grp:win_space_toggle";
     autoRepeatDelay = 200;
   };
 
@@ -68,8 +62,7 @@ in {
   '';
 
   # bigger tty fonts
-  console.font =
-    "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
+  console.font = "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
   services.xserver.dpi = 180;
   environment.variables = {
     GDK_SCALE = "2";

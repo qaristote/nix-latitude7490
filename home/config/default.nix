@@ -8,7 +8,7 @@
     ./firefox
     ./git.nix
     # ./i3
-    ./kdeconnect.nix
+    # ./kdeconnect.nix
     ./picom.nix
     ./redshift.nix
     ./rofi.nix

@@ -20,6 +20,7 @@
     ] ++ [
       # Programming languages
       python3Full
+      ocaml opam ocamlPackages.menhir
     ];
 
   home.wallpaper = ./dotfiles/background-image;

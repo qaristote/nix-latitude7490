@@ -30,20 +30,20 @@ in {
   };
 
   # Session managment
-  services.xidlehook = {
-    enable = backgroundImage != null;
-    not-when-fullscreen = true;
-    not-when-audio = true;
-    timers = [
-      {
-        delay = 120;
-        command = "${pkgs.brightnessctl}/bin/brightnessctl set 10%-";
-        canceller = "${pkgs.brightnessctl}/bin/brightnessctl set +10%";
-      }
-      {
-        delay = 180;
-        command = "${lockscreen}/bin/lockscreen.sh";
-      }
-    ];
-  };
+  # services.xidlehook = {
+  #   enable = backgroundImage != null;
+  #   not-when-fullscreen = true;
+  #   not-when-audio = true;
+  #   timers = [
+  #     {
+  #       delay = 120;
+  #       command = "${pkgs.brightnessctl}/bin/brightnessctl set 10%-";
+  #       canceller = "${pkgs.brightnessctl}/bin/brightnessctl set +10%";
+  #     }
+  #     {
+  #       delay = 180;
+  #       command = "${lockscreen}/bin/lockscreen.sh";
+  #     }
+  #   ];
+  # };
 }
