@@ -1,7 +1,6 @@
 { config, pkgs, nixpkgs, ... }:
 
-let background-image = config.home-manager.users.qaristote.home.wallpaper;
-in {
+{
   personal.gui = {
     enable = true;
     xserver.enable = true;
@@ -11,7 +10,6 @@ in {
 
   services.xserver = {
     displayManager.lightdm = {
-      # background = background-image;
       greeters.gtk = {
         extraConfig = ''
           user-background = false
