@@ -31,7 +31,7 @@
     nat = {
       enable = true;
       internalInterfaces = [ "ve-+" ];
-      externalInterface = "tun0";
+      externalInterface = "wlp2s0";
     };
   };
 }
