@@ -14,5 +14,6 @@
     "latitude-7490/nixos-hardware"
     "latitude-7490/nixpkgs"
     "latitude-7490/stylix"
+    "latitude-7490/devenv"
   ];
 }
