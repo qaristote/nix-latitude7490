@@ -15,6 +15,4 @@
       };
     };
   };
-
-  programs.steam.enable = true;
 }
