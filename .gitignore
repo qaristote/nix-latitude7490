@@ -1,0 +1,4 @@
+### devenv
+.devenv/
+.devenv.flake.nix
+
