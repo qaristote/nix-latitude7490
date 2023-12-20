@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   personal = {
     profiles = {
       dev = true;
@@ -13,4 +13,6 @@
   };
 
   accounts.email.accounts.personal.primary = true;
+
+  home.packages = [pkgs.screen];
 }
