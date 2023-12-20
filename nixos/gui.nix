@@ -1,6 +1,4 @@
-{ config, pkgs, nixpkgs, ... }:
-
-{
+{...}: {
   personal.gui = {
     enable = true;
     xserver.enable = true;

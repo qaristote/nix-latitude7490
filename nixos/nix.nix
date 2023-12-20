@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   personal.nix = {
     enable = true;
     autoUpgrade = true;

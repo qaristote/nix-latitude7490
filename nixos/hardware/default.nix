@@ -1,7 +1,6 @@
-{ nixos-hardware, ... }:
-
-{
-  imports = [ # Include the results of the hardware scan.
+{nixos-hardware, ...}: {
+  imports = [
+    # Include the results of the hardware scan.
     ./hardware-configuration.nix
 
     # Community-curated hardware configuration
@@ -22,5 +21,5 @@
   };
 
   # faulty Intel CPU
-  boot.kernelParams = [ "i915.dc_enable=0" "intel_idle.max_cstate=1" ];
+  boot.kernelParams = ["i915.dc_enable=0" "intel_idle.max_cstate=1"];
 }

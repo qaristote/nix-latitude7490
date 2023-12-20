@@ -1,6 +1,4 @@
-{ config, ... }:
-
-{
+{config, ...}: {
   personal.user = {
     enable = true;
     name = "qaristote";

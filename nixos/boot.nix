@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+{pkgs, ...}: {
   personal.boot = {
     grub.enable = true;
     efi.enable = true;

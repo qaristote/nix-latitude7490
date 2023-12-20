@@ -1,6 +1,4 @@
-{ ... }:
-
-{
+{...}: {
   personal = {
     profiles = {
       dev = true;
