@@ -14,4 +14,9 @@
     flake = "git+file:///etc/nixos";
     gc.enable = true;
   };
+  systemd.services.flake-update.preStart = ''
+    pushd /home/qaristote/code/nix/machines/latitude-7490
+    git status
+    popd
+  '';
 }
