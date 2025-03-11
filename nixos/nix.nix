@@ -6,6 +6,7 @@
       autoUpdateInputs = [
         "latitude-7490/home-manager"
         "latitude-7490/my-nixpkgs"
+        "latitude-7490/my-nixpkgs/nur"
         "latitude-7490/nixos-hardware"
         "latitude-7490/nixpkgs"
         "latitude-7490/stylix"
