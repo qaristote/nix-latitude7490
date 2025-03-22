@@ -9,6 +9,7 @@
     ./hardware
     ./nix.nix
     ./networking.nix
+    ./system.nix
     ./users.nix
   ];
 
