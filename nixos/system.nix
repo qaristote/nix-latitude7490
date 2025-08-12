@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   personal.system = {
     autoUpgrade = {
       enable = true;
@@ -12,9 +13,9 @@
     };
     flake = "git+file:///etc/nixos";
   };
-  systemd.services.flake-update.preStart = ''
-    pushd /home/qaristote/code/nix/machines/latitude-7490
-    git status
-    popd
-  '';
+
+  # /root/.gitconfig should have
+  # [safe]
+  #   directory = /home/qaristote/code/nix/machines/latitude-7490
+  systemd.services.nixos-upgrade.environment.HOME = "/root";
 }
